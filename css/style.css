@@ -1,0 +1,250 @@
+/* ===================== Reset & Basic Styles ===================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+/* ===================== Header & Banner ===================== */
+header {
+    position: relative;
+}
+
+.banner {
+    background-image: url("../images/banner.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+.banner::after {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
+    z-index: 1;
+}
+
+.banner h1, .banner p {
+    position: relative;
+    z-index: 2;
+    margin: 5px;
+}
+
+/* ===================== Navigation ===================== */
+nav {
+    background-color: #2E7D32; /* green */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    display: block;
+    padding: 15px 20px;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #1B5E20;
+}
+
+/* ===================== Dropdown Menu Animation ===================== */
+nav ul li ul.dropdown {
+    display: block;
+    opacity: 0;
+    transform: translateY(-10px);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #2E7D32;
+    min-width: 150px;
+    z-index: 5;
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+
+nav ul li:hover ul.dropdown {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+nav ul li ul.dropdown li {
+    width: 100%;
+}
+
+
+/* Image row below navigation */
+.image-row {
+    display: flex;
+    justify-content: center; /* center the images */
+    gap: 10px; /* space between images */
+    padding: 15px 0;
+}
+
+.image-row img {
+    width: 200px;  /* adjust size as needed */
+    height: auto;
+    border-radius: 5px; /* optional, for slightly rounded corners */
+}
+
+
+
+
+/* ===================== Main Content ===================== */
+main {
+    padding: 40px 20px;
+    max-width: 1000px;
+    margin: 20px auto;
+    background-color: #e8f5e9;        /* soft light green */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Optional alternate background for variety */
+main.alt {
+    background-color: #f1f8e9;        /* slightly lighter green */
+}
+
+/* ===================== Headings & Text ===================== */
+h2 {
+    color: #2E7D32;                  /* dark green headings */
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+p, li {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 10px;
+}
+
+/* ===================== Links ===================== */
+a {
+    color: #2E7D32;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #1B5E20;
+    text-decoration: underline;
+}
+
+/* ===================== Footer ===================== */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #2E7D32;
+    color: white;
+    margin-top: 20px;
+}
+
+/* ===================== Images ===================== */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 15px 0;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+/* Activity gallery in main section */
+.activity-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.activity-gallery img {
+    width: 100%;
+        height: 280px;      /* increase size here */
+    object-fit: cover;  
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.activity-gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+}
+
+/* ===================== Forms ===================== */
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 15px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* ===================== Buttons ===================== */
+button, .btn {
+    padding: 10px 20px;
+    background-color: #2E7D32;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover, .btn:hover {
+    background-color: #1B5E20;
+    transform: scale(1.05);
+}
+
+/* ===================== Optional responsive tweaks ===================== */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+    nav ul li ul.dropdown {
+        position: static;
+        transform: none;
+        opacity: 1;
+        pointer-events: auto;
+    }
+/* Thank You page styling */
+.thankyou-main {
+    padding: 80px 20px;
+    max-width: 800px;
+    margin: 100px auto;
+    background: rgba(255, 255, 255, 0.85) url('../images/thankyou-bg.jpg') no-repeat center center;
+    background-size: cover;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+}
+
+

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate - Green Initiative</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+    <div class="banner">
+        <h1>Green Initiative</h1>
+        <p>Make a difference today</p>
+    </div>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="portfolio.html">Portfolio</a>
+                <ul class="dropdown">
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                </ul>
+            </li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="donate.html">Donate</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <h2>Donate</h2>
+    <p>Your support helps us plant trees, run workshops, and clean communities. Every contribution counts!</p>
+
+    <form action="thankyou.html" method="post">
+        <label for="donorName">Full Name:</label><br>
+        <input type="text" id="donorName" name="donorName" required><br><br>
+
+        <label for="donorEmail">Email Address:</label><br>
+        <input type="email" id="donorEmail" name="donorEmail" required><br><br>
+
+        <label for="donorPhone">Phone Number:</label><br>
+        <input type="tel" id="donorPhone" name="donorPhone"><br><br>
+
+        <label for="amount">Donation Amount (USD):</label><br>
+        <input type="number" id="amount" name="amount" required><br><br>
+
+        <label for="paymentMethod">Payment Method:</label><br>
+        <select id="paymentMethod" name="paymentMethod" required>
+            <option value="">Select</option>
+            <option value="mpesa">M-Pesa</option>
+            <option value="paypal">PayPal</option>
+            <option value="bank">Bank Transfer</option>
+        </select><br><br>
+
+        <label for="message">Message (optional):</label><br>
+        <textarea id="message" name="message" rows="4"></textarea><br><br>
+
+        <button type="submit" class="btn">Donate Now</button>
+    </form>
+</main>
+
+<footer>
+    &copy; 2026 Green Initiative
+</footer>
+
+</body>
+</html>
