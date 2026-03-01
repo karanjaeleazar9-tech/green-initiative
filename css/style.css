@@ -101,18 +101,56 @@ nav ul li ul.dropdown li {
 
 
 /* Image row below navigation */
+
+
+
+
+
+
+
+
+
+
+
 .image-row {
     display: flex;
-    justify-content: center; /* center the images */
-    gap: 10px; /* space between images */
+    flex-wrap: wrap;      /* ← add this line */
+    justify-content: center;
+    gap: 10px;
     padding: 15px 0;
 }
 
+
+
+
+
+
+
+
 .image-row img {
-    width: 200px;  /* adjust size as needed */
-    height: auto;
-    border-radius: 5px; /* optional, for slightly rounded corners */
+    width: 23%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
 }
+
+/* Tablet */
+@media (max-width: 768px) {
+    .image-row img {
+        width: 48%;
+    }
+}
+
+/* Phone */
+@media (max-width: 480px) {
+    .image-row img {
+        width: 100%;
+    }
+}
+
+
+
+
 
 
 
